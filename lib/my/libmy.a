@@ -1,0 +1,454 @@
+!<arch>
+//                                              188       `
+my_str_isupper.c/
+my_find_prime_sup.c/
+my_sort_int_array.c/
+my_compute_power_rec.c/
+my_strcapitalize.c/
+my_str_isalpha.c/
+my_compute_square_root.c/
+my_str_isprintable.c/
+my_str_islower.c/
+my_strupcase.c/ 1602511683  1000  1000  100664  217       `
+/*
+** EPITECH PROJECT, 2020
+** my strupcase
+** File description:
+** The STRUPCASE function returns a copy of String converted to upper case.
+*/
+
+int my_strncmp(char const *s1, char const *s2, int n)
+{
+    return 0;
+}
+
+/0              1602512308  1000  1000  100664  155       `
+/*
+** EPITECH PROJECT, 2020
+** my str is upper 
+** File description:
+** say if a string is upper
+*/
+
+int my_str_isupper(char const *str)
+{
+    return 0;
+}
+
+my_showmem.c/   1602512412  1000  1000  100664  142       `
+/*
+** EPITECH PROJECT, 2020
+** my show mem
+** File description:
+** my show mem
+*/
+
+int my_showmem(char const *str,int size)
+{
+    return 0;
+}
+/18             1602512464  1000  1000  100664  137       `
+/*
+** EPITECH PROJECT, 2020
+** find prime sup
+** File description:
+** find prime sup
+*/
+
+int my_find_prime_sup(int nb)
+{
+    return 0;
+}
+
+my_is_prime.c/  1602512454  1000  1000  100664  148       `
+/*
+** EPITECH PROJECT, 2020
+** my is prime
+** File description:
+** say if the number is prime or not
+*/
+
+int my_is_prime(int nb)
+{
+    return 0;
+} 
+my_strlen.c/    1602512302  1000  1000  100664  201       `
+/*
+** EPITECH PROJECT, 2020
+** my_strlen
+** File description:
+**say number character of a string
+*/
+
+int my_strlen(char const *str)
+{
+    int i;
+
+    for(i= 0; str[i] != '\0'; i += 1);
+    return i;
+}
+
+my_strstr.c/    1602511863  1000  1000  100664  193       `
+/*
+** EPITECH PROJECT, 2020
+** my strstr
+** File description:
+** find and return a sub-string into a string up to the end 
+*/
+
+char *my_strstr(char *str, char const *to_find)
+{
+    return 0;
+}
+
+my_getnbr.c/    1602512448  1000  1000  100664  127       `
+/*
+** EPITECH PROJECT, 2020
+** get nbr
+** File description:
+** get number
+*/
+
+int my_getnbr(char const *str)
+{
+    return 0;
+}
+
+my_putnbr.c/    1602512433  1000  1000  100664  122       `
+/*
+** EPITECH PROJECT, 2020
+** my_putnbr
+** File description:
+** write number
+*/
+
+int my_putnbr(int nb)
+{
+    return 0;
+}
+my_strcpy.c/    1602512368  1000  1000  100664  279       `
+/*
+** EPITECH PROJECT, 2020
+** my_strcpy
+** File description:
+** function that copies a string into another
+*/
+
+char *my_strcpy(char *dest, char  const *src)
+{
+    int i;
+
+    for( i = 0; src[i] != '\0'; i += 1)
+        dest[i] = src[i];
+    dest[i]  = '\0'; 
+    return dest;
+}
+
+my_strcat.c/    1602512382  1000  1000  100664  144       `
+/*
+** EPITECH PROJECT, 2020
+** my str cat
+** File description:
+** my str cat
+*/
+
+char *my_strcat(char *dest, char const *src)
+{
+    return 0;
+}
+my_strncmp.c/   1602512058  1000  1000  100664  288       `
+/*
+** EPITECH PROJECT, 2020
+** my strncmp
+** File description:
+** Cette fonction permet de comparer deux chaînes de caractères et de savoir si la première est inférieure, égale ou supérieure à la seconde.
+*/
+
+int my_strncmp(char const *s1, char const *s2, int n)
+{
+    return 0;
+}
+my_strncpy.c/   1602005297  1000  1000  100664  319       `
+/*
+** EPITECH PROJECT, 2020
+** my_strncpy
+** File description:
+** function that copies n charactere of a string into another                  
+*/
+
+char *my_strncpy(char *dest, char  const *src,int n)
+{
+    int i;
+    for(i = 0; i <= n; i += 1) {
+        dest[i] = src[i];
+    }
+    dest[i-1] = '\0';
+    return dest;
+}
+
+my_swap.c/      1602511499  1000  1000  100664  190       `
+/*
+** EPITECH PROJECT, 2020
+** my_strlen
+** File description:
+** swap two number
+*/
+
+#include<stdio.h>
+
+void my_swap (int *a, int *b)
+{
+    int c=*a;
+    int d=*b;
+    *a = d;
+    *b = c;
+}
+my_revstr.c/    1602512423  1000  1000  100664  456       `
+/*
+** EPITECH PROJECT, 2020
+** my_strcpy
+** File description:
+** function that reverse a string into a array
+*/
+
+void my_swap(char a,char b);
+
+char *my_revstr(char *str)
+{
+    int i = 0;
+    int n=0;
+    char a = 0;
+    char b = 0;
+    
+    while(str[i] != '\0')
+        i += 1;
+    i -= 1;
+    for( n = 0; n < i ; n += 1, i -= 1) { 
+        a = str[n];
+        b = str[i];
+        my_swap(a,b);
+        str[n]=a;
+        str[i]=b;
+    }
+    return str;
+}
+my_putchar.c/   1602512438  1000  1000  100664  158       `
+/*
+** EPITECH PROJECT, 2020
+** my_putchar
+** File description:
+** write one charactere
+*/
+
+#include<unistd.h>
+
+void my_putchar(char c)
+{
+    write(1,&c,1);
+}
+/39             1602512391  1000  1000  100664  139       `
+/*
+** EPITECH PROJECT, 2020
+** my_sort_int_array
+** File description:
+** sort int array
+*/
+
+void my_sort_int_array(int *tab, int size)
+{
+}
+
+my_str_isnum.c/ 1602512322  1000  1000  100664  155       `
+/*
+** EPITECH PROJECT, 2020
+** my str is num
+** File description:
+** say if the string is a number
+*/
+
+int my_str_isnum(char const *str)
+{
+    return 0;
+}
+
+my_isneg.c/     1602512460  1000  1000  100664  280       `
+/*
+** EPITECH PROJECT, 2020
+** my_isneg
+** File description:
+** say if the number is positive or negative for each number given
+*/
+
+void my_putchar(char c);
+
+int my_isneg (int nb)
+{
+    if (nb<0)
+        my_putchar('N');
+    else {
+        my_putchar ('P');
+    }
+    return 0;
+}
+my_strcmp.c/    1602512378  1000  1000  100664  433       `
+/*
+** EPITECH PROJECT, 2020
+** strcmp
+** File description:
+** Cette fonction permet de comparer deux chaînes de caractères et de savoir si la première est inférieure, égale ou supérieure à la seconde. Cette comparaison sera réalisée en utilisant l'ordre lexicographique (et donc, en tenant compte des valeurs ASCII des différents caractères comparés). 
+*/
+
+int my_strcmp(char const *s1, char const *s2)
+{
+    return 0;
+}
+
+/60             1602512475  1000  1000  100664  160       `
+/*
+** EPITECH PROJECT, 2020
+** my compute power rec
+** File description:
+** compute power rec
+*/
+
+int my_compute_power_rec(int nb, int power)
+{
+    return 0;
+}
+/84             1602512386  1000  1000  100664  202       `
+/*
+** EPITECH PROJECT, 2020
+** my str capitalize
+** File description:
+** It is the name of string of whose first character we want to capitalize.
+*/
+
+char *my_strcapitalize(char *str)
+{
+    return 0;
+}
+/104            1602512341  1000  1000  100664  204       `
+/*
+** EPITECH PROJECT, 2020
+** my str is alpha
+** File description:
+**Cette fonction permet de tester si un caractère est alphabétique ou non 
+*/
+
+int *my_str_isalpha(char const *str)
+{
+    return 0;
+}
+my_putstr.c/    1602512428  1000  1000  100664  275       `
+/*
+** EPITECH PROJECT, 2020
+** my_putstr
+** File description:
+** say character of a string,one by one
+*/
+
+void my_putchar(char c);
+
+int my_putstr(char const *str)
+{
+    int i = 0;
+
+    while(str[i] != '\0') {
+        my_putchar(str[i]);
+        i += 1;
+    }
+    return 0;
+}
+
+/122            1602512469  1000  1000  100664  164       `
+/*
+** EPITECH PROJECT, 2020
+** my compute square root
+** File description:
+** compute square root
+*/
+
+int my_compute_power_rec(int nb, int power)
+{
+    return 0;
+}
+my_strlowcase.c/1602512298  1000  1000  100664  319       `
+/*
+** EPITECH PROJECT, 2020
+** my strlowcase
+** File description:
+** The STRLOWCASE function returns a copy of String converted to lowercase characters. Only uppercase characters are modifiedâ€”lowercase and non-alphabetic characters are copied without change.
+*/
+
+char *my_strlowcase(char *str)
+{
+    return 0;
+}
+
+/148            1602512313  1000  1000  100664  266       `
+/*
+** EPITECH PROJECT, 2020
+** my str is printable
+** File description:
+** my str is printable returns True if all characters in the string are printable or the string is empty. If not, it returns False.
+*/
+
+int my_str_isprintable(char const *str)
+{
+    return 0;
+}
+my_strncat.c/   1602512292  1000  1000  100664  152       `
+/*
+** EPITECH PROJECT, 2020
+** my str cat
+** File description:
+** my str cat
+*/
+
+char *my_strcat(char *dest, char const *src, int nb)
+{
+    return 0;
+}
+/170            1602512335  1000  1000  100664  154       `
+/*
+** EPITECH PROJECT, 2020
+** my str is lower
+** File description:
+** say if a string is lower
+*/
+
+int my_str_islower(char const *str)
+{
+    return 0;
+}
+my_showstr.c/   1602512408  1000  1000  100664  133       `
+/*
+** EPITECH PROJECT, 2020
+** my show str
+** File description:
+** my show str
+*/
+
+int my_showstr(char const *str)
+{
+    return 0;
+}
+
+my_strcnpy.c/   1602511953  1000  1000  100664  301       `
+/*
+** EPITECH PROJECT, 2020
+** my_strncpy
+** File description:
+** function that copies n charactere of a string into another
+*/
+
+char *my_strncpy(char *dest, char  const *src,int n)
+{
+    int i;
+    for(i = 0; i <= n; i += 1) {
+        dest[i] = src[i];
+    }
+    dest[i-1] = '\0';
+    return dest;
+}
+
