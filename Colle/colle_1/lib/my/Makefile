@@ -1,0 +1,54 @@
+##-----------------------
+## EPITECH PROJECT, 2020
+## makefile
+## File description:
+## gcc , build , lib.
+##
+
+SRC =	my_strlen.c	\
+	my_compute_power_rec.c	\
+	my_compute_square_root.c	\
+	my_find_prime_sup.c	\
+	my_getnbr.c	\
+	my_isneg.c	\
+	my_is_prime.c	\
+	my_putchar.c	\
+	my_put_nbr.c	\
+	my_revstr.c	\
+	my_showmem.c	\
+	my_showstr.c	\
+	my_sort_int_array.c	\
+	my_strcapitalize.c	\
+	my_strcat.c	\
+	my_strcmp.c	\
+	my_strcnpy.c	\
+	my_strcpy.c	\
+	my_str_isalpha.c	\
+	my_str_islower.c	\
+	my_str_isnum.c	\
+	my_str_isprintable.c	\
+	my_str_isupper.c	\
+	my_strlen.c	\
+	my_strlowcase.c	\
+	my_strncat.c	\
+	my_strncmp.c	\
+	my_strstr.c	\
+	my_strupcase.c	\
+	my_swap.c
+
+OBJ =	$(SRC:.c=.o)
+
+NAME = test
+
+ALL: 	 $(NAME) include clean
+
+$(NAME):	$(OBJ)
+	ar rc libmy.a $(OBJ)
+	cp libmy.a ../
+
+include:
+	mkdir -p ../../include
+	cp -P my.h ../../include/
+
+clean:
+	rm -f $(OBJ)

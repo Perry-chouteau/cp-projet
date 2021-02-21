@@ -1,0 +1,17 @@
+    int i = 0;                                                                                                                                                                               
+    int o = 0;                                                                                                                                                                               
+    int row = my_getnbr(buffer);                                                                                                                                                             
+    int col = count_col(buffer);                                                                                                                                                             
+                                                                                                                                                                                             
+    while (buffer[o] != '.' && buffer[o] != 'o')                                                                                                                                             
+        o++;                                                                                                                                                                                 
+    tab = malloc(sizeof(char *) * (row + 1));                                                                                                                                                
+    for (int j = 0; i <= row; i++) {                                                                                                                                                         
+        tab[i] = malloc(sizeof(char) * (col + 1));                                                                                                                                           
+        for (j = 0; j <= col && buffer[o] != '\0'; j++, o++) {                                                                                                                               
+            tab[i][j] = buffer[o];                                                                                                                                                           
+        }                                                                                                                                                                                    
+        tab[i][j] = '\0';                                                                                                                                                                    
+    }                                                                                                                                                                                        
+    tab[i] = NULL;                                                                                                                                                                           
+    return (tab);

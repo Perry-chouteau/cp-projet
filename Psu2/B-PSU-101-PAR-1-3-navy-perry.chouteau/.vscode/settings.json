@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "optional": "c",
+        "functional": "c",
+        "iosfwd": "c",
+        "stdexcept": "c",
+        "system_error": "c",
+        "tuple": "c",
+        "algorithm": "c"
+    }
+}

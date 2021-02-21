@@ -1,0 +1,17 @@
+/*
+** EPITECH PROJECT, 2020
+** part 1
+** File description:
+** recursive descent parsing
+*/
+
+int part_1()
+{
+    ;
+}
+
+int main()
+{
+    char *str()
+    part_1()
+}

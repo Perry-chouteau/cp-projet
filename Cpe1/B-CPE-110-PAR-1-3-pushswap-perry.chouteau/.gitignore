@@ -1,0 +1,4 @@
+*.o
+pushswap-tester
+vgcore
+pushswap

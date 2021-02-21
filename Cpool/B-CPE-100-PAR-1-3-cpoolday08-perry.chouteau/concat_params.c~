@@ -1,0 +1,48 @@
+/*
+** EPITECH PROJECT, 2020
+** concat params
+** File description:
+** function turns the command-line given arguments into a single string
+*/
+
+#include <stdlib.h>
+
+/* char *my_putstr(char *str) */
+/* { */
+/*     char i; */
+/*     for(i=0; str[i] != '\0'; i += 1); */
+/* } */
+
+int sum_argv_len(int argc,char **argv)
+{
+    int i;
+    int j;
+    int size;
+    for(i = 0; i < argc; i += 1) {
+        for(j = 0; **argv[j] != '\0'; j += 1);
+        size += j + 1;
+    }
+    return size;
+}
+
+char *concat_params(int argc , char **argv)
+{
+    char *str;
+    int i ;
+    int n;
+    int size = 0;
+
+    size = sum_argv_len(argc, **argv);
+    str = malloc(sizeof(char) * (size));
+    for (i = 0;i < argc; i += 1) {
+        for (n = 0; argv[n] != '\0'; n+1)
+        }
+    }
+    return str;
+}
+
+int main(int ac, char **av)
+{
+    my_putstr(concat_params(ac, av));
+    return EXIT_SUCCESS;
+}

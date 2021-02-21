@@ -1,0 +1,78 @@
+/*
+** EPITECH PROJECT, 2020
+** main.c
+** File description:
+** main.c
+*/
+
+#include "../includes/bs_pong.h"
+#include <stdio.h>
+
+int main()
+{
+//Ex 1
+    float x = 1.1;
+    float y = 3;
+    float z = 5;
+    float *xyz = xyz_in_vector(x,y,z);
+
+    for (int i = 0; i < 3; i += 1)
+         printf("%lf\n",xyz[i]);
+
+     printf("\n");
+//Ex 2 part_1
+    float xyz1[3]= {1.1, 3, 5};
+    float xyz2[3] = {-7, 9, 2};
+    float *sum_xyz = sum_vector(xyz1, xyz2);
+    for (int i = 0; i < 3; i += 1)
+        printf("%lf\n",sum_xyz[i]);
+
+    printf("\n");
+//Ex2 part_2
+    float *diff_xyz = diff_vector(xyz1, xyz2);
+    for (int i = 0; i < 3; i += 1)
+        printf("%lf\n", diff_xyz[i]);
+
+    printf("\n");
+//Ex 3
+    float m = 200.0001;
+    float float_xyz[3] = {33.1234567, 33.1234567, 33.1234567};
+    float *m_xyz = m_vector(m, float_xyz); 
+
+    for (int i = 0; i < 3; i += 1)
+        printf("%f\n",m_xyz[i]);
+
+    printf("\n");
+//Ex 4
+    float xyz_ex4[3] = {3, 4, 0};
+    float norm;
+    norm = norm_vector(xyz_ex4);
+    printf("%f\n", norm);
+
+    printf("\n");
+//Ex 5
+    float x1 = 1.1;
+    float y1 = 3;
+    float z1 = 5;
+    float x2 = -7;
+    float y2 = 9;
+    float z2 = 2;
+    float t = 4;
+    float *xyz_by_time = pos_by_time(x1,y1,z1,x2,y2,z2,t);
+
+    for (int i = 0; i < 3; i += 1)
+        printf("%f\n",xyz_by_time[i]);
+
+    printf("\n");
+//Ex 6
+    int ball_hit = ball_bat(x1,y1,z1,x2,y2,z2,t);
+    printf("%i\n", ball_hit);
+
+    printf("\n");
+//Ex 7
+    
+    float angle = angle_vector(diff_vector(xyz1,xyz2));
+    printf("%f\n", angle);
+    printf("\n");
+    return 0;
+}
