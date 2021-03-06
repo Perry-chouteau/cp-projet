@@ -1,0 +1,6 @@
+*.o
+*vg 
+*.a
+*~
+*gc*
+unit_tests

@@ -1,101 +1,73 @@
 ##
-## EPITECH PROJECT, 2020
-## B-CPE-110-PAR-1-3-pushswap-perry.chouteau
+## EPITECH PROJECT, 2021
+## antman
 ## File description:
-## Makefile
+## bootstrap
 ##
 
-SRC =	sources/principal.c	\
-		sources/init.c
+# program
+NAME	=	my_project
 
-SRC_MATH =	math_dir/sources/intersection_shere.c	\
-		math_dir/sources/intersection_cylindre.c	\
-		math_dir/sources/intersection_cone.c	\
-		math_dir/sources/equadra_lib.c	\
-		math_dir/sources/def_line_pos.c	\
-\
-		math_dir/sources/f_x.c	\
-		math_dir/sources/fp_x.c
+SRC =	sources/project.c	\
+		sources/init.c	\
 
-SRC_PRINTF =	printf_dir/sources/my_printf.c	\
-				printf_dir/sources/cond1.c	\
-				printf_dir/sources/cond2.c	\
-\
-				printf_dir/sources/convert_printf.c	\
-				printf_dir/sources/putnbr_printf.c	\
-				printf_dir/sources/putchar_printf.c	\
-				printf_dir/sources/putstr_printf.c	\
-				printf_dir/sources/revstr_printf.c
+MAIN	=	sources/main.c
 
-SRC_LIB =	lib_dir/sources/my_compute_power_rec.c	\
-			lib_dir/sources/my_compute_square_root.c	\
-			lib_dir/sources/my_sqrt.c	\
-			lib_dir/sources/my_is_prime.c	\
-			lib_dir/sources/my_swap.c	\
-			lib_dir/sources/my_find_prime_sup.c	\
-\
-			lib_dir/sources/my_atof.c	\
-			lib_dir/sources/my_isneg.c	\
-			lib_dir/sources/my_str_isnum.c	\
-			lib_dir/sources/my_sort_int_array.c	\
-			lib_dir/sources/my_getnbr.c	\
-\
-			lib_dir/sources/my_itoa.c	\
-			lib_dir/sources/my_put_nbr.c	\
-			lib_dir/sources/my_putchar.c	\
-			lib_dir/sources/my_putstr.c	\
-			lib_dir/sources/my_strlen.c	\
-			lib_dir/sources/my_showstr.c	\
-\
-			lib_dir/sources/my_str_isalpha.c	\
-			lib_dir/sources/my_str_isprintable.c	\
-			lib_dir/sources/my_strcmp.c	\
-			lib_dir/sources/my_strncmp.c	\
-			lib_dir/sources/my_revstr.c	\
-			lib_dir/sources/my_str_islower.c	\
-			lib_dir/sources/my_str_isupper.c	\
-			lib_dir/sources/my_strcapitalize.c	\
-			lib_dir/sources/my_strlowcase.c	\
-			lib_dir/sources/my_strupcase.c	\
-			lib_dir/sources/my_strcpy.c	\
-			lib_dir/sources/my_strcat.c	\
-			lib_dir/sources/my_strncat.c	\
-			lib_dir/sources/my_strncpy.c	\
-			lib_dir/sources/my_strstr.c	\
-			lib_dir/sources/my_showmen.c	\
-\
-			lib_dir/sources/main_linklist.c	\
-			lib_dir/sources/linklist.c
+CFLAGS	=	-Wall -Wextra
 
-SRC_TEST = tests/*.c
+CPPFLAGS	=	-I lib_dir/includes/ -L lib_dir/ -l lib	\
+				-I printf_dir/includes/ -L printf_dir/ -l printf	\
+				-I csfml_dir/includes/ -L csfml_dir/ -l csfml
 
-OBJ =	$(SRC_LIB:.c=.o)	\
-		$(SRC_PRINTF:.c=.o)	\
-		$(SRC:.c=.o)
+CPPFLAGS_CSFML	=	-l csfml-graphics -l csfml-audio -l csfml-window -l csfml-system
 
-NAME = example
-NAME_TEST = unit_tests
+OBJ	=	$(SRC:.c=.o)	\
+		$(MAIN:.c=.o)
 
+# tests
+NAME_TEST	=	unit_tests
+
+SRC_TEST	=	tests/tests.c	\
+				tests/tests_error.c
+
+CPPFLAGS_TEST	=	--coverage -l criterion -I include/
+
+# compilation
+CC =	gcc -o
+
+#rules
 all:	$(OBJ)
-	gcc -o $(NAME) $(OBJ) -Wall -Wextra
+	make -C lib_dir/
+	make -C printf_dir/
+	make -C csfml_dir/
+	$(CC) $(NAME) $(SRC) $(MAIN) $(CPPFLAGS) $(CFLAGS)
 
 clean:
-	rm -rf *~
-	cd sources/ && rm -rf *~
-	cd printf_dir/sources/ && rm -rf *~
-	cd lib_dir/sources/ && rm -rf *~
-	rm -rf *.gcda && rm -rf *.gcno
-	rm -rf $(NAME)
-	rm -rf unit_tests
+	make clean -C lib_dir/
+	make clean -C printf_dir/
+	make clean -C csfml_dir/
+	rm -f *~
+	rm -f *gc*
+	rm -f unit_tests
 
-fclean: clean
-	rm -rf $(OBJ)
-	rm -rf $(EXE)
+fclean:
+	make fclean -C lib_dir/
+	make fclean -C printf_dir/
+	make fclean -C csfml_dir/
+	rm -f $(NAME)
+	rm -f *gc*
+	rm -f a.out
+	rm -f $(OBJ)
 
-re: fclean all
+re:	fclean all
+	make re -C lib_dir/
+	make re -C printf_dir/
+	make re -C csfml_dir/
 
-tests_run:	fclean $(OBJ)
-	gcc -o $(NAME_TEST) $(OBJ) $(SRC_TEST) --coverage -l criterion
-	./unit_tests
+tests_run:
+	$(CC) $(NAME_TEST) $(SRC_TEST) $(SRC) $(CPPFLAGS_TEST)
+	./$(NAME_TEST)
 	gcovr --exclude tests/
 	gcovr --exclude tests/ --branches
+
+.PHONY: all clean fclean re tests_run

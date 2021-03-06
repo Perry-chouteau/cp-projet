@@ -1,0 +1,13 @@
+# Folders
+.vscode/
+
+# Files
+*.o
+*.gc*
+vgcore.*
+*.a
+
+# Binaries
+my_defender
+a.out
+unit_tests

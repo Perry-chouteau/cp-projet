@@ -18,12 +18,16 @@ int bombyx1(s_t *s)
 
 int bombyx2(s_t *s)
 {
-    for (double k = 1.00; k <= 4.00; k += 0.01)
+    double save = s->n;
+
+    for (double k = 1; k <= 4; k += 0.01) {
+        s->n = save;
         for (int i = 0; i < s->l; i += 1) {
-            if (i > (s->k - 2))
-                printf("%.2f %.2f\n", k, s->n);
-            s->n *= k * ((1000 - s->n) / 1000);
+            if (i > s->k - 2)
+                printf("%.2f %.2f\n", k , s->n);
+            s->n = k * s->n * ((1000 - s->n) / 1000);
         }
+    }
     return 0;
 }
 

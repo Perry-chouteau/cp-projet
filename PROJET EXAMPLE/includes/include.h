@@ -1,12 +1,12 @@
 /*
 ** EPITECH PROJECT, 2020
-** Psu2
+** project
 ** File description:
-** navy.h
+** project.h
 */
 
-#ifndef ITSC_H
-#define ITSC_H
+#ifndef PROJECT_H
+#define PROJECT_H
 
 //lib - lib_c
 #include "../lib_dir/includes/my.h"

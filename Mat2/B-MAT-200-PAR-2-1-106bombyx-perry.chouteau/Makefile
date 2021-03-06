@@ -8,8 +8,6 @@
 SRC =	sources/principal.c	\
 		sources/init.c
 
-SRC_MATH = \
-
 SRC_PRINTF =	printf_dir/sources/my_printf.c	\
 				printf_dir/sources/cond1.c	\
 				printf_dir/sources/cond2.c	\

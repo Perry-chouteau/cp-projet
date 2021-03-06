@@ -1,0 +1,6 @@
+*.o 
+*.a
+*~
+*gc*
+unit_tests
+my_defender
