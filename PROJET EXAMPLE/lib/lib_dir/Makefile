@@ -40,6 +40,7 @@ SRC =	sources/my_compute_power_rec.c	\
 		sources/my_strncat.c	\
 		sources/my_strncpy.c	\
 		sources/my_strstr.c	\
+		sources/my_str_to_tab.c	\
 		sources/my_showmen.c	\
 \
 		sources/main_linklist.c	\

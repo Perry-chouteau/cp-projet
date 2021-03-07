@@ -110,6 +110,7 @@ char *my_strcpy(char *dest, char const *src);
 char *my_strncpy(char *dest, char const *src, int n);
 char *my_strstr(char *str, char const *to_find);
 char *my_strdup(char const *src);
+char **my_str_to_tab(char *str, char key);
 
 //linklist
 cell_t *empty_list(void);
