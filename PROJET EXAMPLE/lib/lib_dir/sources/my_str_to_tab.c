@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-char **my_str_to_tab(char *str, char key)
+char **my_str_to_tab(const char *str,const char key)
 {
     char **tab;
     int y = 1;
@@ -25,7 +25,7 @@ char **my_str_to_tab(char *str, char key)
             x += 1;
         tab[i] = malloc(sizeof(char) * x + 1);
         tab[i][x] = '\0';
-        for (int j = 0; str[tmp + j] != key; j += 1)
+        for (int j = 0; j < x; j += 1)
             tab[i][j] = str[tmp + j];
         tmp += (x + 1);
     }
